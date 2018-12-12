@@ -1,11 +1,47 @@
 import React, { Component } from 'react';
+import './Header.css';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
     return (
-      <div className="App">
-          MY HEADER
+    <nav className="navbar is-transparent">
+      <div className="container">
+        <div className="navbar-brand">
+          <a className="navbar-item">MyCompany</a>
+          <span
+            className="navbar-burger"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div
+          className="navbar-menu"
+        >
+          <div className="navbar-end">
+            <Link to="/" className="navbar-item r-item">Home</Link>
+            <Link to="faq" className="navbar-item r-item">Features</Link>
+            <Link to="faq" className="navbar-item r-item">About</Link>
+            <Link to="faq" className="navbar-item r-item">FAQ</Link>
+
+            <div className="navbar-item">
+              <p className="control">
+                <a className="button is-primary is-outlined">
+                  <span className="icon">
+                    <i className="fa fa-download"></i>
+                  </span>
+                  <span>
+                    Join Now
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </nav>
     );
   }
 }
