@@ -1,5 +1,5 @@
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }

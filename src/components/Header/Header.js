@@ -3,14 +3,29 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isToggleOn: false
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
   render() {
+    let menuActive = this.state.isToggleOn ? 'is-active' : '';
     return (
     <nav className="navbar is-transparent">
       <div className="container">
         <div className="navbar-brand">
           <a className="navbar-item">MyCompany</a>
           <span
-            className="navbar-burger"
+            className={"navbar-burger " + menuActive}
+            onClick={this.handleClick}
           >
             <span></span>
             <span></span>
@@ -18,7 +33,7 @@ class Header extends Component {
           </span>
         </div>
         <div
-          className="navbar-menu"
+          className={"navbar-menu " + menuActive}
         >
           <div className="navbar-end">
             <Link to="/" className="navbar-item r-item">Home</Link>
